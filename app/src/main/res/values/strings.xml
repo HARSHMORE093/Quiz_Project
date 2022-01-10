@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Quiz Application</string>
+    <string name="i_quiz_all_year_the_chase_is_n_just_a_medium_sized_part_of_my_quiz_life">I quiz all year. \'The Chase\' is \n just a medium sized part of my quiz life.</string>
+    <string name="welcome_to_quiz_master">Welcome to Quiz Master</string>
+    <string name="get_started">Get Started</string>
+    <string name="login_now">Login Now</string>
+    <string name="please_login_to_continue_using_app">Please login to continue using app</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="log_in">Log In</string>
+    <string name="don_t_have_an_account_signup">Don\'t have an account? SignUp</string>
+    <string name="stay_connected">Stay Connected</string>
+    <string name="enter_your_email_address_and_password_n_to_get_access_to_your_account">Enter your email address and password \n to get access to your account</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="already_have_an_account_login">Already have an account? Login</string>
+    <string name="sign_up">Sign Up</string>
+</resources>
