@@ -15,4 +15,12 @@
     <string name="already_have_an_account_login">Already have an account? Login</string>
     <string name="sign_up">Sign Up</string>
     <string name="harsh">Harsh More</string>
+    <string name="follow">Follow</string>
+    <string name="share">Share</string>
+    <string name="_13_07_2021">13/07/2021</string>
+    <string name="quiz">Quiz</string>
+    <string name="quiz_yourself_daily">Quiz Yourself Daily</string>
+    <string name="follow_us">Follow Us</string>
+    <string name="profile">Profile</string>
+    <string name="rate_us">Rate Us</string>
 </resources>

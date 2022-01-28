@@ -1,10 +1,11 @@
-package com.example.quizapplication
+package com.example.quizapplication.app.activities
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import com.example.quizapplication.R
 import com.example.quizapplication.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -13,13 +14,13 @@ class LoginActivity: AppCompatActivity() {
     lateinit var firebaseAuth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding=DataBindingUtil.setContentView(this,R.layout.activity_login)
+        binding=DataBindingUtil.setContentView(this, R.layout.activity_login)
         firebaseAuth= FirebaseAuth.getInstance()
         binding.btnlogin.setOnClickListener {
             login()
         }
         binding.btnSignUp.setOnClickListener {
-            val intent= Intent(this,SignUpActivity::class.java)
+            val intent= Intent(this, SignUpActivity::class.java)
             startActivity(intent)
             finish()
         }
@@ -34,7 +35,7 @@ class LoginActivity: AppCompatActivity() {
         firebaseAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(this){
             if(it.isSuccessful){
                 Toast.makeText(this,"Sucess",Toast.LENGTH_SHORT).show()
-                val intent =Intent(this,MainActivity::class.java)
+                val intent =Intent(this, MainActivity::class.java)
                 startActivity(intent)
                 finish()
             }else{
