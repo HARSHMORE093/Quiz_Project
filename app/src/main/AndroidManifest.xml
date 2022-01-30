@@ -10,8 +10,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.QuizApplication">
-        <activity android:name=".app.activities.LoginIntro"
+        android:theme="@style/Theme.QuizApplication.noActionBar">
+        <activity android:name=".app.activities.LoginIntro"/>
+        <activity android:name=".app.activities.MainActivity"/>
+        <activity android:name=".app.activities.SignUpActivity"/>
+        <activity android:name=".app.activities.LoginActivity"/>
+        <activity android:name=".app.activities.QuestionActivity" android:theme="@style/Theme.QuizApplication"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,9 +23,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".app.activities.MainActivity"/>
-        <activity android:name=".app.activities.SignUpActivity"/>
-        <activity android:name=".app.activities.LoginActivity"/>
     </application>
 
 </manifest>

@@ -1,5 +1,6 @@
 package com.example.quizapplication.app.activities
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -56,6 +57,7 @@ class MainActivity : AppCompatActivity() {
         setupFireStore()
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private fun setupFireStore() {
         firestore= FirebaseFirestore.getInstance()
         val collectionReference=firestore.collection("quizzes")
@@ -64,7 +66,10 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this,"Error Fecthing data",Toast.LENGTH_SHORT).show()
                 return@addSnapshotListener
             }//addSnapshotlistener check karega ki data change tho nahi ho raha ,Agar change hoga data mai, tho update kardega
-            Log.d("Data",value.toObjects(Quiz::class.java).toString())//json to object banayenge
+            Log.d("DATA",value.toObjects(Quiz::class.java).toString())//json to object banayenge
+            quizList.clear()
+            quizList.addAll(value.toObjects(Quiz::class.java))
+            adapter.notifyDataSetChanged()
         }
     }
 

@@ -11,13 +11,14 @@
         android:layout_height="match_parent"
         android:layout_margin="16dp"
         android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        tools:ignore="UseCompoundDrawables">
 
         <ImageView
             android:id="@+id/quizIcon"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            />
+            tools:ignore="ContentDescription" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

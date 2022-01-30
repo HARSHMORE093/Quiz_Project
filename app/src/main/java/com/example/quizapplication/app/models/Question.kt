@@ -8,4 +8,4 @@ data class Question (
     var option4:String="",
     var answer:String="",
     var userAnswer:String="",
-        )
+)
