@@ -1,6 +1,7 @@
 package com.example.quizapplication.app.activities
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -17,7 +18,13 @@ import com.example.quizapplication.R
 import com.example.quizapplication.app.adapter.QuizAdapter
 import com.example.quizapplication.app.models.Quiz
 import com.example.quizapplication.databinding.ActivityMainBinding
+import com.google.android.material.bottomnavigation.BottomNavigationItemView
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.datepicker.MaterialDatePicker
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import java.text.SimpleDateFormat
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -25,48 +32,64 @@ class MainActivity : AppCompatActivity() {
     private var quizList= mutableListOf<Quiz>()
     lateinit var firestore: FirebaseFirestore
     lateinit var actionBarDrawerToggle: ActionBarDrawerToggle//on off funtionality of drawer
+    var backPressedTime: Long = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding=DataBindingUtil.setContentView(this, R.layout.activity_main)
         setUpView()
-        populateDummyData()
     }
 
-    private fun populateDummyData() {
-        quizList.add(Quiz("12-10-2020","12-10-2020"))
-        quizList.add(Quiz("17-10-2020","18-10-2020"))
-        quizList.add(Quiz("16-10-2020","19-10-2020"))
-        quizList.add(Quiz("15-10-2020","22-10-2020"))
-        quizList.add(Quiz("14-10-2020","32-10-2020"))
-        quizList.add(Quiz("13-10-2020","42-10-2020"))
-        quizList.add(Quiz("13-10-2020","42-10-2020"))
-        quizList.add(Quiz("13-10-2020","42-10-2020"))
-        quizList.add(Quiz("13-10-2020","42-10-2020"))
-        quizList.add(Quiz("13-10-2020","42-10-2020"))
-        quizList.add(Quiz("13-10-2020","42-10-2020"))
-        quizList.add(Quiz("13-10-2020","42-10-2020"))
-        quizList.add(Quiz("13-10-2020","42-10-2020"))
-        quizList.add(Quiz("13-10-2020","42-10-2020"))
-        quizList.add(Quiz("13-10-2020","42-10-2020"))
-        quizList.add(Quiz("13-10-2020","42-10-2020"))
+    override fun onBackPressed() {
+        if (backPressedTime + 3000 > System.currentTimeMillis()) {
+            super.onBackPressed()
+            finish()
+        } else {
+            Toast.makeText(this, "Press back again to leave the app.", Toast.LENGTH_LONG).show()
+        }
+        backPressedTime=System.currentTimeMillis()
     }
 
     fun setUpView(){
         setUpDrawerLayout()
         setUpRecyclerView()
-        setupFireStore()
+        setUpFireStore()
+        setUpDatePicker()
     }
 
+    @SuppressLint("SimpleDateFormat")
+    private fun setUpDatePicker() {
+        binding.btnDatePicker.setOnClickListener {
+            val datePicker = MaterialDatePicker.Builder.datePicker().build()
+            datePicker.show(supportFragmentManager, "DatePicker")
+            datePicker.addOnPositiveButtonClickListener {
+                Log.d("DATEPICKER", datePicker.headerText)
+                val dateFormatter = SimpleDateFormat("dd-MM-yyyy")
+                val date = dateFormatter.format(Date(it))
+                val intent = Intent(this, QuestionActivity::class.java)
+                intent.putExtra("DATE", date)
+                startActivity(intent)
+            }
+            datePicker.addOnNegativeButtonClickListener {
+                Log.d("DATEPICKER", datePicker.headerText)
+
+            }
+            datePicker.addOnCancelListener {
+                Log.d("DATEPICKER", "Date Picker Cancelled")
+            }
+        }
+    }
+
+
     @SuppressLint("NotifyDataSetChanged")
-    private fun setupFireStore() {
-        firestore= FirebaseFirestore.getInstance()
-        val collectionReference=firestore.collection("quizzes")
-        collectionReference.addSnapshotListener{value,error ->
-            if(value == null || error!=null){
-                Toast.makeText(this,"Error Fecthing data",Toast.LENGTH_SHORT).show()
+    private fun setUpFireStore() {
+        firestore = FirebaseFirestore.getInstance()
+        val collectionReference = firestore.collection("quizzes")
+        collectionReference.addSnapshotListener { value, error ->
+            if(value == null || error != null){
+                Toast.makeText(this, "Error fetching data", Toast.LENGTH_SHORT).show()
                 return@addSnapshotListener
-            }//addSnapshotlistener check karega ki data change tho nahi ho raha ,Agar change hoga data mai, tho update kardega
-            Log.d("DATA",value.toObjects(Quiz::class.java).toString())//json to object banayenge
+            }
+            Log.d("DATA", value.toObjects(Quiz::class.java).toString())
             quizList.clear()
             quizList.addAll(value.toObjects(Quiz::class.java))
             adapter.notifyDataSetChanged()
@@ -83,6 +106,29 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(binding.appBar)
         actionBarDrawerToggle= ActionBarDrawerToggle(this,binding.mainDrawer, R.string.quiz, R.string.quiz)
         actionBarDrawerToggle.syncState()
+        binding.navigationView.setNavigationItemSelectedListener {item->
+            when(item.itemId){
+                R.id.btnProfile ->{
+                    val intent=Intent(this,ProfileActivity::class.java)
+                    startActivity(intent)
+                    binding.mainDrawer.closeDrawers()
+                    true
+                }
+                R.id.btnfollowUs ->{
+                    val intent=Intent(this,Follow_us::class.java)
+                    startActivity(intent)
+                    binding.mainDrawer.closeDrawers()
+                    true
+                }
+                R.id.btnAbout ->{
+                    val intent=Intent(this,AboutActivity::class.java)
+                    startActivity(intent)
+                    binding.mainDrawer.closeDrawers()
+                    true
+                }
+                else -> {false}
+            }
+        }
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(actionBarDrawerToggle.onOptionsItemSelected(item)){
@@ -90,9 +136,5 @@ class MainActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {//3 dot menu
-        val inflater: MenuInflater = menuInflater
-        inflater.inflate(R.menu.nav_menu, menu)
-        return true
-    }
+
 }

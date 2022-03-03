@@ -13,6 +13,15 @@
         android:orientation="vertical"
         android:gravity="center"
         tools:ignore="UseCompoundDrawables">
+        <TextView
+            android:id="@+id/quizName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:text="@string/harsh"
+            style="@style/TextAppearance.AppCompat.Headline"/>
 
         <ImageView
             android:id="@+id/quizIcon"

@@ -16,10 +16,8 @@
     <string name="sign_up">Sign Up</string>
     <string name="harsh">Harsh More</string>
     <string name="follow">Follow</string>
-    <string name="share">Share</string>
     <string name="_13_07_2021">13/07/2021</string>
     <string name="quiz">Quiz</string>
-    <string name="quiz_yourself_daily">Quiz Yourself Daily</string>
     <string name="follow_us">Follow Us</string>
     <string name="profile">Profile</string>
     <string name="rate_us">Rate Us</string>
@@ -27,4 +25,24 @@
     <string name="next">Next</string>
     <string name="submit">Submit</string>
     <string name="a_harsh">A: Harsh</string>
+    <string name="your_score_20">Your Score: 20</string>
+    <string name="home">Home</string>
+    <string name="account">Account</string>
+    <string name="share">Your Score: $score</string>
+    <string name="About_Text">The Full form of QUIZ is Quick Uniform Intelligence Zone.\n\n Use the Quizzes app to learn anything, anywhere.\n\n You can study on your own or engage in group quizzes, and assignments—in person and remotely.\n\n Quizzes is used by more than 20 million people per month in schools, homes, and offices around the world.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="log_out">Log Out</string>
+    <string name="h_m_production">H M Production</string>
+    <string name="about">About</string>
+    <string name="name">Name</string>
+    <string name="who_invented_android_studio">Who invented android studio?</string>
+    <string name="quiz_yourself_daily">Quiz Yourself Daily</string>
+    <string name="_00_00">00:00</string>
+    <string name="about_us">About Us</string>
+    <string name="welcome_to_quiz_app">Welcome to Quiz app</string>
+    <string name="exit">Exit</string>
+    <string name="todo">TODO</string>
+    <string name="follow_me">Follow Me : 👉</string>
 </resources>

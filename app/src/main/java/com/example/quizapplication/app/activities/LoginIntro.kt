@@ -18,16 +18,16 @@ class LoginIntro : AppCompatActivity() {
         binding.btnGetStarted.setOnClickListener {
             redirect("LOGIN")
         }
-        if(auth.currentUser != null){//baar login nahi karna.
+        if(auth.currentUser != null){//bar-bar login nahi karna.
             Toast.makeText(this,"User is already logged in!",Toast.LENGTH_SHORT).show()
-            redirect("MAIN")
+            redirect("SPLASH")
         }
 
     }
     private fun redirect(name:String){
         val intent = when (name) {
             "LOGIN" -> Intent(this, LoginActivity::class.java)
-            "MAIN" -> Intent(this, MainActivity::class.java)
+            "SPLASH" -> Intent(this, Splash_screen::class.java)
             else -> throw Exception("no path exists")
         }
         startActivity(intent)

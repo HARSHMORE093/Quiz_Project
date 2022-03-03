@@ -15,6 +15,7 @@ class SignUpActivity :AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         firebaseAuth= FirebaseAuth.getInstance()
+
         binding=DataBindingUtil.setContentView(this, R.layout.activity_signup)
         binding.signup.setOnClickListener {
             signUPUser()
@@ -48,5 +49,6 @@ class SignUpActivity :AppCompatActivity(){
                 Toast.makeText(this,"Error creating user",Toast.LENGTH_SHORT).show()
             }
         }
+
     }
 }

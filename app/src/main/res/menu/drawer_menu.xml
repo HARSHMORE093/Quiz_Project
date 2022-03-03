@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="@string/follow_us"/>
-    <item android:title="@string/profile"/>
-    <item android:title="@string/rate_us"/>
+    <item android:title="@string/profile"
+        android:id="@+id/btnProfile"
+        android:icon="@drawable/accoount"
+
+       />
+    <item android:title="@string/follow_us" android:id="@+id/btnfollowUs"
+        android:icon="@drawable/ic_baseline_stars_24"
+        />
+    <item android:title="@string/about_us" android:id="@+id/btnAbout"
+        android:icon="@drawable/about"
+        />
 </menu>

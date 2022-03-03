@@ -3,26 +3,41 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/moreh/Quiz/app/src/main/res/drawable-v24/option_text.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/moreh/Quiz/app/src/main/res/drawable/about.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/moreh/Quiz/app/src/main/res/drawable/accoount.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/moreh/Quiz/app/src/main/res/drawable/bar.xml" value="0.10104166666666667" />
         <entry key="..\:/Users/moreh/Quiz/app/src/main/res/drawable/btn_primary.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/moreh/Quiz/app/src/main/res/drawable/custom_button.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/moreh/Quiz/app/src/main/res/drawable/edit_text.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/moreh/Quiz/app/src/main/res/drawable/ic_circular.xml" value="0.2520833333333333" />
         <entry key="..\:/Users/moreh/Quiz/app/src/main/res/drawable/ic_hamburger.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/moreh/Quiz/app/src/main/res/drawable/ic_header.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/moreh/Quiz/app/src/main/res/drawable/ic_home.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/moreh/Quiz/app/src/main/res/drawable/ic_path_133.xml" value="0.26205128205128203" />
         <entry key="..\:/Users/moreh/Quiz/app/src/main/res/drawable/ic_wave.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/moreh/Quiz/app/src/main/res/drawable/ic_wave1.xml" value="0.26614583333333336" />
-        <entry key="..\:/Users/moreh/Quiz/app/src/main/res/drawable/option_item_bg.xml" value="0.10625" />
+        <entry key="..\:/Users/moreh/Quiz/app/src/main/res/drawable/ic_wave2.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/moreh/Quiz/app/src/main/res/drawable/option_item_bg.xml" value="0.264" />
         <entry key="..\:/Users/moreh/Quiz/app/src/main/res/drawable/option_item_selector.xml" value="0.2" />
+        <entry key="..\:/Users/moreh/Quiz/app/src/main/res/drawable/round_logo.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/moreh/Quiz/app/src/main/res/drawable/rounded_box.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/moreh/Quiz/app/src/main/res/layout/activity_about.xml" value="0.2" />
+        <entry key="..\:/Users/moreh/Quiz/app/src/main/res/layout/activity_follow_us.xml" value="0.2" />
         <entry key="..\:/Users/moreh/Quiz/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/moreh/Quiz/app/src/main/res/layout/activity_login_intro.xml" value="0.1634963768115942" />
         <entry key="..\:/Users/moreh/Quiz/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/moreh/Quiz/app/src/main/res/layout/activity_profile.xml" value="0.21105072463768115" />
         <entry key="..\:/Users/moreh/Quiz/app/src/main/res/layout/activity_question.xml" value="0.264" />
+        <entry key="..\:/Users/moreh/Quiz/app/src/main/res/layout/activity_quiz.xml" value="0.1816123188405797" />
+        <entry key="..\:/Users/moreh/Quiz/app/src/main/res/layout/activity_result.xml" value="0.25" />
         <entry key="..\:/Users/moreh/Quiz/app/src/main/res/layout/activity_signup.xml" value="0.264" />
+        <entry key="..\:/Users/moreh/Quiz/app/src/main/res/layout/activity_splash_screen.xml" value="0.264" />
         <entry key="..\:/Users/moreh/Quiz/app/src/main/res/layout/drawer_header.xml" value="0.264" />
         <entry key="..\:/Users/moreh/Quiz/app/src/main/res/layout/option_item.xml" value="0.264" />
         <entry key="..\:/Users/moreh/Quiz/app/src/main/res/layout/quiz_items.xml" value="0.2" />
         <entry key="..\:/Users/moreh/Quiz/app/src/main/res/layout/quizitems.xml" value="0.12158054711246201" />
+        <entry key="..\:/Users/moreh/Quiz/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25" />
         <entry key="..\:/Users/moreh/Quiz/app/src/main/res/menu/drawer_menu.xml" value="0.25" />
         <entry key="..\:/Users/moreh/Quiz/app/src/main/res/menu/nav_menu.xml" value="0.25" />
         <entry key="..\:/Users/moreh/Quiz/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.26205128205128203" />

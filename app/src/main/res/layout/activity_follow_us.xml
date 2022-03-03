@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".app.activities.Follow_us">
+
+    <TextView
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/follow_me"
+        android:textColor="@color/colorPrimaryText"
+        android:textStyle="bold"
+        android:background="@drawable/edit_text"
+        android:layout_marginTop="90dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/rounded_box"
+        app:layout_constraintBottom_toTopOf="@+id/image2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/fb"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="68dp"
+        android:background="@color/white"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="@+id/view5"
+        app:layout_constraintTop_toTopOf="@+id/view5"
+        app:srcCompat="@drawable/facebook" />
+
+    <ImageButton
+        android:id="@+id/link"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:layout_margin="15dp"
+        android:layout_marginStart="108dp"
+        android:background="@color/white"
+        android:scaleType="centerCrop"
+        android:src="@drawable/linkedin"
+        app:layout_constraintBottom_toBottomOf="@+id/view5"
+        app:layout_constraintEnd_toStartOf="@+id/fb"
+        app:layout_constraintStart_toStartOf="@+id/view5"
+        app:layout_constraintTop_toBottomOf="@+id/insta"
+        app:layout_constraintVertical_bias="0.311" />
+
+    <ImageButton
+        android:id="@+id/insta"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        android:scaleType="centerCrop"
+        android:src="@drawable/instagram"
+        android:layout_margin="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/fb"
+        app:layout_constraintStart_toStartOf="@+id/view5"
+        app:layout_constraintTop_toTopOf="@+id/view5" />
+
+    <ImageButton
+        android:id="@+id/twitter"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        android:scaleType="centerCrop"
+        android:src="@drawable/twitter"
+        app:layout_constraintBottom_toBottomOf="@+id/view5"
+        app:layout_constraintEnd_toEndOf="@+id/view5"
+        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintStart_toEndOf="@+id/link"
+        app:layout_constraintTop_toBottomOf="@+id/fb"
+        app:layout_constraintVertical_bias="0.458" />
+
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_wave1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

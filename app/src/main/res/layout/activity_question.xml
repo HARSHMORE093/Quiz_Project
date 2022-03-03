@@ -7,24 +7,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="12dp"
     tools:context=".app.activities.QuestionActivity">
+    <View
+        android:id="@+id/view4"
+        android:layout_width="wrap_content"
+        android:layout_height="130dp"
+        android:background="@color/purple_500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/rounded_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <TextView
         android:id="@+id/Description"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorPrimaryText"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:gravity="center"
+        android:text="@string/who_invented_android_studio"
+        android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/view5"
+        app:layout_constraintEnd_toEndOf="@+id/view5"
+        app:layout_constraintStart_toStartOf="@+id/view5"
+        app:layout_constraintTop_toTopOf="@+id/view5" />
 
     <Button
         android:id="@+id/btnPrevious"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_primary"
         android:text="@string/previous"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -43,6 +75,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_primary"
         android:text="@string/next"
         android:textAllCaps="false"
         android:visibility="invisible"
@@ -58,19 +93,24 @@
         app:layout_constraintGuide_percent="0.9" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/optionList"
+        android:id="@+id/optionlist"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="25dp"
         app:layout_constraintBottom_toTopOf="@+id/hori_guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/description" />
+        app:layout_constraintTop_toBottomOf="@+id/view5" />
 
     <Button
         android:id="@+id/btnSubmit"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/btn_primary"
         android:text="@string/submit"
         android:textAllCaps="false"
         android:visibility="invisible"

@@ -33,12 +33,23 @@
             android:layout_marginTop="10dp"
             android:text="@string/enter_your_email_address_and_password_n_to_get_access_to_your_account" />
 
+
+        <EditText
+            android:background="@drawable/edit_text"
+            android:id="@+id/etname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:hint="@string/name"
+            android:textSize="16sp"
+            android:ems="10"
+            android:inputType="textEmailAddress" />
         <EditText
             android:background="@drawable/edit_text"
             android:id="@+id/etEmailsignup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             android:hint="@string/email"
             android:textSize="16sp"
             android:ems="10"

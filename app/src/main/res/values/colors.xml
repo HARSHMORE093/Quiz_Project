@@ -18,5 +18,6 @@
     <color name="colorEditTextBgColor">#f2f5fa</color>
     <color name="colorEditTextBorderColor">#E9EBEF</color>
     <color name="colorPrimaryButtonBg">#18206F</color>
+    <color name="green">#1FED9C</color>
 
 </resources>
