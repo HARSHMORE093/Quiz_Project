@@ -83,7 +83,7 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("NotifyDataSetChanged")
     private fun setUpFireStore() {
         firestore = FirebaseFirestore.getInstance()
-        val collectionReference = firestore.collection("quizzes")
+        val collectionReference = firestore.collection("quizzes")//ek collection hai quizzes ka jisme sare date or question hai
         collectionReference.addSnapshotListener { value, error ->
             if(value == null || error != null){
                 Toast.makeText(this, "Error fetching data", Toast.LENGTH_SHORT).show()

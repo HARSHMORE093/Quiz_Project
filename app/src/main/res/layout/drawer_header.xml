@@ -5,19 +5,19 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:background="@color/custom"
-    android:layout_height="220dp"
+    android:layout_height="200dp"
     android:padding="16dp"
-    android:gravity="bottom"
-    >
+    android:gravity="bottom">
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/btn_primary"
-        android:src="@mipmap/ic_launcher_round"/>
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:background="@color/custom"
+        android:src="@mipmap/ic_launcher"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="15dp"
         style="@style/TextAppearance.AppCompat.Large"
         android:text="@string/quiz_yourself_daily"/>
 

@@ -11,7 +11,6 @@ import com.example.quizapplication.R
 import com.example.quizapplication.app.models.Quiz
 import com.example.quizapplication.databinding.ActivityResultBinding
 import com.google.gson.Gson
-import com.google.gson.annotations.Expose
 
 class ResultActivity : AppCompatActivity() {
     private lateinit var quiz: Quiz
@@ -71,7 +70,6 @@ class ResultActivity : AppCompatActivity() {
                 progress.progress = score
                 progress.max=100
             }
-
         }
         binding.txtScore.text="Your Score: $score/100"
         binding.btnshare.setOnClickListener {

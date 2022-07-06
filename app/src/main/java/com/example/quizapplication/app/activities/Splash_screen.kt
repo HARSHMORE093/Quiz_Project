@@ -8,7 +8,7 @@ import android.os.Looper
 import com.example.quizapplication.R
 
 class Splash_screen : AppCompatActivity() {
-    private val Timeout:Long=2000
+    private val Timeout:Long=3000
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
