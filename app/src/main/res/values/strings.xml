@@ -45,4 +45,5 @@
     <string name="exit">Exit</string>
     <string name="todo">TODO</string>
     <string name="follow_me">Follow Me : 👉</string>
+    <string name="textview">TextView</string>
 </resources>

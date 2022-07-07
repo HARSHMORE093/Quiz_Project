@@ -2,8 +2,10 @@ package com.example.quizapplication.app.activities
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.util.Log
 import android.view.View
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -28,8 +30,25 @@ class QuestionActivity : AppCompatActivity() {
         binding=DataBindingUtil.setContentView(this,R.layout.activity_question)
         setUpFirestore()
         setUpEventListener()
+        val timer = object: CountDownTimer(120000, 1000) {
+            override fun onTick(millisUntilFinished: Long) {
+                val min=(millisUntilFinished/1000)/60
+                val second=(millisUntilFinished/1000)%60
+                binding.CountTime.text = ("Time: $min:$second")
+            }
+            override fun onFinish() {
+                binding.CountTime.text = "Time is Over."
+                setUpSubmit()
+            }
+        }
+        timer.start()
     }
-
+    private fun setUpSubmit(){
+        val intent = Intent(this, ResultActivity::class.java)
+        val json  = Gson().toJson(quizzes!![0])
+        intent.putExtra("QUIZ", json)
+        startActivity(intent)
+    }
     override fun onBackPressed() {
         if (backPressedTime + 3000 > System.currentTimeMillis()) {
             startActivity(Intent(this,MainActivity::class.java))
