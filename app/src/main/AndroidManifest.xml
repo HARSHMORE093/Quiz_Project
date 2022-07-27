@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.quizapplication">
+    package="com.hm.quizapplication">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -12,22 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizApplication.noActionBar">
         <activity
-            android:name=".app.activities.Follow_us"
+            android:name="com.hm.quizapplication.app.activities.Follow_us"
             android:exported="false" />
         <activity
-            android:name=".app.activities.Splash_screen"
+            android:name="com.hm.quizapplication.app.activities.Splash_screen"
             android:exported="false" />
         <activity
-            android:name=".app.activities.AboutActivity"
+            android:name="com.hm.quizapplication.app.activities.AboutActivity"
             android:exported="false" />
         <activity
-            android:name=".app.activities.ProfileActivity"
+            android:name="com.hm.quizapplication.app.activities.ProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".app.activities.ResultActivity"
+            android:name="com.hm.quizapplication.app.activities.ResultActivity"
             android:exported="false" />
         <activity
-            android:name=".app.activities.LoginIntro"
+            android:name="com.hm.quizapplication.app.activities.LoginIntro"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,10 +35,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".app.activities.MainActivity" />
-        <activity android:name=".app.activities.SignUpActivity" />
-        <activity android:name=".app.activities.LoginActivity" />
-        <activity android:name=".app.activities.QuestionActivity" />
+        <activity android:name="com.hm.quizapplication.app.activities.MainActivity" />
+        <activity android:name="com.hm.quizapplication.app.activities.SignUpActivity" />
+        <activity android:name="com.hm.quizapplication.app.activities.LoginActivity" />
+        <activity android:name="com.hm.quizapplication.app.activities.QuestionActivity" />
     </application>
 
 </manifest>

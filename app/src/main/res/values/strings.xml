@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Quiz Application</string>
+    <string name="app_name">Coding Quiz</string>
     <string name="i_quiz_all_year_the_chase_is_n_just_a_medium_sized_part_of_my_quiz_life">I quiz all year. \'The Chase\' is \n just a medium sized part of my quiz life.</string>
     <string name="welcome_to_quiz_master">Welcome to Quiz Master</string>
     <string name="get_started">Get Started</string>
